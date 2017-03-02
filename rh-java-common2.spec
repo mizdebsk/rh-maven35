@@ -15,6 +15,7 @@ Summary:    Package that installs %scl
 License:    GPLv2+
 Source4:    README
 Source5:    LICENSE
+Source6:    macros.build
 
 BuildRequires:  help2man
 BuildRequires:  python-devel
@@ -132,6 +133,7 @@ sed -i "s/'/\\\\(aq/g" %{scl_name}.7
 
 %install
 %scl_install
+cat %{SOURCE6} >>%{buildroot}%{_root_sysconfdir}/rpm/macros.%{scl}-config
 
 install -d -m 755 %{buildroot}%{_scl_scripts}
 install -p -m 755 enable %{buildroot}%{_scl_scripts}/

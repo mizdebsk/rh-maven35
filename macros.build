@@ -1,0 +1,14 @@
+%__spec_prep_template #!%{__spec_prep_shell}\
+%{__spec_prep_pre}\
+. /opt/rh/rh-java-common2/enable\
+%{nil}
+
+%__spec_build_template #!%{__spec_build_shell}\
+%{__spec_build_pre}\
+. /opt/rh/rh-java-common2/enable\
+%{nil}
+
+%__spec_install_template #!%{__spec_install_shell}\
+%{__spec_install_pre}\
+. /opt/rh/rh-java-common2/enable\
+%{nil}

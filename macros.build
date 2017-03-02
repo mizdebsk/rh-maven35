@@ -12,3 +12,8 @@
 %{__spec_install_pre}\
 . /opt/rh/rh-java-common2/enable\
 %{nil}
+
+%__spec_check_template #!%{__spec_check_shell}\
+%{__spec_check_pre}\
+. /opt/rh/rh-java-common2/enable\
+%{nil}

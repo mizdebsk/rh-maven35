@@ -9,7 +9,7 @@
 
 Name:       %scl_name
 Version:    2.0
-Release:    0.1%{?dist}
+Release:    0%{?dist}
 Summary:    Package that installs %scl
 
 License:    GPLv2+
@@ -142,41 +142,21 @@ install -p -m 755 enable %{buildroot}%{_scl_scripts}/
 install -Dpm0644 macros.%{scl_name} %{buildroot}%{_root_sysconfdir}/rpm/macros.%{scl_name_prefix}%{scl_name_base}-scldevel
 
 # install dirs used by some deps
-install -dm0755 %{buildroot}%{_prefix}/lib/rpm
 install -dm0755 %{buildroot}%{_scl_root}%{python_sitelib}
+install -dm0755 %{buildroot}%{_defaultlicensedir}
 
 # install generated man page
-mkdir -p %{buildroot}%{_mandir}/man7/
-install -m 644 %{scl_name}.7 %{buildroot}%{_mandir}/man7/%{scl_name}.7
-
 install -m 755 -d %{buildroot}%{_mandir}/man1
 install -m 755 -d %{buildroot}%{_mandir}/man7
+install -m 644 %{scl_name}.7 %{buildroot}%{_mandir}/man7/%{scl_name}.7
 
-install -m 755 -d %{buildroot}%{_javaconfdir}
-install -m 755 -d %{buildroot}%{_javadir}
-install -m 755 -d %{buildroot}%{_javadocdir}
-install -m 755 -d %{buildroot}%{_jnidir}
-install -m 755 -d %{buildroot}%{_mavenpomdir}
-install -m 755 -d %{buildroot}%{_datadir}/maven-metadata
-install -m 755 -d %{buildroot}%{_datadir}/xmvn
 
 %files runtime
 %doc README LICENSE
 %{scl_files}
+%{_mandir}/*
 %{_prefix}/lib/python2.*
-%{_prefix}/lib/rpm
-%{_mandir}/man7/%{scl_name}.*
-%dir %{_javaconfdir}
-%dir %{_javadir}
-%dir %{_javadocdir}
-# %%{scl_files} macro owns all %%{_prefix}/lib subdirs/files with 555 perms
-# we need to override this to prevent file conflict with javapackages-tools
-%attr(755,root,root) %dir %{_jnidir}
-%dir %{_mavenpomdir}
-%dir %{_datadir}/maven-metadata
-%dir %{_datadir}/xmvn
-%dir %{_mandir}/man1
-%dir %{_mandir}/man7
+%{_defaultlicensedir}
 
 %files build
 %{_root_sysconfdir}/rpm/macros.%{scl}-config
@@ -185,5 +165,3 @@ install -m 755 -d %{buildroot}%{_datadir}/xmvn
 %{_root_sysconfdir}/rpm/macros.%{scl_name_prefix}%{scl_name_base}-scldevel
 
 %changelog
-* Tue Feb 14 2017 Michael Simacek <msimacek@redhat.com> - 2.0-0.1
-- Prepare for version 2

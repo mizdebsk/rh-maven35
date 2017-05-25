@@ -25,6 +25,7 @@
 %_without_desktop 1
 %_without_ehcache 1
 %_without_emacs 1
+%_without_eclipse 1
 %_without_equinox 1
 %_without_fop 1
 %_without_ftp 1

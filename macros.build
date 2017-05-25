@@ -31,6 +31,7 @@
 %_without_ftp 1
 %_without_gradle 1
 %_without_groovy 1
+%_without_hadoop 1
 %_without_hsqldb 1
 %_without_itext 1
 %_without_jpa 1

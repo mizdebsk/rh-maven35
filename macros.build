@@ -17,3 +17,30 @@
 %{__spec_check_pre}\
 %{?scl:. /opt/rh/%{scl}/enable}\
 %{nil}
+
+# USE flags
+%_without_avalon 1
+%_without_bouncycastle 1
+%_without_dafsa 1
+%_without_desktop 1
+%_without_ehcache 1
+%_without_emacs 1
+%_without_equinox 1
+%_without_fop 1
+%_without_ftp 1
+%_without_gradle 1
+%_without_groovy 1
+%_without_hsqldb 1
+%_without_itext 1
+%_without_jpa 1
+%_without_logback 1
+%_without_markdown 1
+%_without_memcached 1
+%_without_memoryfilesystem 1
+%_without_obr 1
+%_without_python 1
+%_without_reporting 1
+%_without_scm 1
+%_without_spring 1
+%_without_ssh 1
+%_without_testlib 1

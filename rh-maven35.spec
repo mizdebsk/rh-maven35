@@ -1,6 +1,6 @@
 %global scl_name_prefix rh-
-%global scl_name_base java-common
-%global scl_name_version 2
+%global scl_name_base maven
+%global scl_name_version 35
 %global scl %{scl_name_prefix}%{scl_name_base}%{scl_name_version}
 %scl_package %scl
 
@@ -79,42 +79,42 @@ cp %{SOURCE5} .
 
 cat >macros.%{scl_name} <<EOF
 # SCL configuration
-%%scl_java_common %scl
-%%scl_prefix_java_common %scl_prefix
-%%_scl_prefix_java_common %_scl_prefix
-%%_scl_scripts_java_common %_scl_scripts
-%%_scl_root_java_common %_scl_root
+%%scl_maven %scl
+%%scl_prefix_maven %scl_prefix
+%%_scl_prefix_maven %_scl_prefix
+%%_scl_scripts_maven %_scl_scripts
+%%_scl_root_maven %_scl_root
 # Generic paths inside SCL root
-%%_bindir_java_common %_bindir
-%%_datadir_java_common %_datadir
-%%_defaultdocdir_java_common %_defaultdocdir
-%%_docdir_java_common %_docdir
-%%_exec_prefix_java_common %_exec_prefix
-%%_includedir_java_common %_includedir
-%%_infodir_java_common %_infodir
-%%_libdir_java_common %_libdir
-%%_libexecdir_java_common %_libexecdir
-%%_localstatedir_java_common %_localstatedir
-%%_mandir_java_common %_mandir
-%%_prefix_java_common %_prefix
-%%_sbindir_java_common %_sbindir
-%%_sharedstatedir_java_common %_sharedstatedir
-%%_sysconfdir_java_common %_sysconfdir
+%%_bindir_maven %_bindir
+%%_datadir_maven %_datadir
+%%_defaultdocdir_maven %_defaultdocdir
+%%_docdir_maven %_docdir
+%%_exec_prefix_maven %_exec_prefix
+%%_includedir_maven %_includedir
+%%_infodir_maven %_infodir
+%%_libdir_maven %_libdir
+%%_libexecdir_maven %_libexecdir
+%%_localstatedir_maven %_localstatedir
+%%_mandir_maven %_mandir
+%%_prefix_maven %_prefix
+%%_sbindir_maven %_sbindir
+%%_sharedstatedir_maven %_sharedstatedir
+%%_sysconfdir_maven %_sysconfdir
 # Java-specific paths inside SCL root
-%%_ivyxmldir_java_common %_ivyxmldir
-%%_javaconfdir_java_common %_javaconfdir
-%%_javadir_java_common %_javadir
-%%_javadocdir_java_common %_javadocdir
-%%_jnidir_java_common %_jnidir
-%%_jvmcommondatadir_java_common %_jvmcommondatadir
-%%_jvmcommonlibdir_java_common %_jvmcommonlibdir
-%%_jvmcommonsysconfdir_java_common %_jvmcommonsysconfdir
-%%_jvmdatadir_java_common %_jvmdatadir
-%%_jvmdir_java_common %_jvmdir
-%%_jvmlibdir_java_common %_jvmlibdir
-%%_jvmprivdir_java_common %_jvmprivdir
-%%_jvmsysconfdir_java_common %_jvmsysconfdir
-%%_mavenpomdir_java_common %_mavenpomdir
+%%_ivyxmldir_maven %_ivyxmldir
+%%_javaconfdir_maven %_javaconfdir
+%%_javadir_maven %_javadir
+%%_javadocdir_maven %_javadocdir
+%%_jnidir_maven %_jnidir
+%%_jvmcommondatadir_maven %_jvmcommondatadir
+%%_jvmcommonlibdir_maven %_jvmcommonlibdir
+%%_jvmcommonsysconfdir_maven %_jvmcommonsysconfdir
+%%_jvmdatadir_maven %_jvmdatadir
+%%_jvmdir_maven %_jvmdir
+%%_jvmlibdir_maven %_jvmlibdir
+%%_jvmprivdir_maven %_jvmprivdir
+%%_jvmsysconfdir_maven %_jvmsysconfdir
+%%_mavenpomdir_maven %_mavenpomdir
 EOF
 
 

@@ -46,3 +46,4 @@
 %_without_spring 1
 %_without_ssh 1
 %_without_testlib 1
+%_without_dtd 1

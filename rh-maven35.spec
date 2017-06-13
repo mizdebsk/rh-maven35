@@ -22,6 +22,9 @@ BuildRequires:  python-devel
 BuildRequires:  scl-utils-build
 BuildRequires:  %{name}-javapackages-tools
 
+Requires:   %{name}-runtime = %{version}-%{release}
+Requires:   %{scl_name}-maven
+
 %description
 This is the main package for the %scl Software Collection.
 
@@ -29,7 +32,7 @@ This is the main package for the %scl Software Collection.
 Summary:    Package that handles %scl Software Collection.
 Requires:   scl-utils
 Requires:   java-openjdk-headless
-Requires:   %{name}-javapackages-tools
+Requires:   %{scl_name}-javapackages-tools
 
 %description runtime
 Package shipping essential scripts to work with the %scl Software Collection.
@@ -47,7 +50,7 @@ to build %scl Software Collection.
 %package scldevel
 Summary:    Package shipping development files for %scl
 Requires:   %{name}-runtime = %{version}-%{release}
-Requires:   %{name}-javapackages-local
+Requires:   %{scl_name}-javapackages-local
 
 %description scldevel
 Package shipping development files, especially useful for development of
@@ -151,6 +154,8 @@ install -m 755 -d %{buildroot}%{_mandir}/man1
 install -m 755 -d %{buildroot}%{_mandir}/man7
 install -m 644 %{scl_name}.7 %{buildroot}%{_mandir}/man7/%{scl_name}.7
 
+%files
+# empty main package
 
 %files runtime
 %doc README LICENSE

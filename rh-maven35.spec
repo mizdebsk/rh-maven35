@@ -50,7 +50,6 @@ to build %scl Software Collection.
 %package scldevel
 Summary:    Package shipping development files for %scl
 Requires:   %{name}-runtime = %{version}-%{release}
-Requires:   %{scl_name}-javapackages-local
 
 %description scldevel
 Package shipping development files, especially useful for development of

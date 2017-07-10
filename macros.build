@@ -19,6 +19,8 @@
 %{nil}
 
 # USE flags
+%_with_xmvn_javadoc 1
+
 %_without_avalon 1
 %_without_bouncycastle 1
 %_without_dafsa 1
